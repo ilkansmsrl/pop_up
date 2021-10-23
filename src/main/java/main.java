@@ -23,15 +23,15 @@ public class main {
 
             @Override
             public void run() {
+                Boolean visible = driver.findElement(By.xpath("//body/div[7]/div[1]/div[@class='cf-cta-close']")).isDisplayed();
                 WebElement element = driver.findElement(By.xpath("//body/div[7]/div[1]/div[@class='cf-cta-close']"));
-                Boolean visible = element.isDisplayed();
                 if (visible == true){
                     System.out.println("burda");
                     element.click();
                 }
                 else {
                     try {
-                        Thread.sleep(3000);
+                        Thread.sleep(5000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
